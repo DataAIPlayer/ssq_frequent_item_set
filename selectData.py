@@ -51,8 +51,8 @@ def getSuffix():
     
 #****************************************************
 #获取所有开奖网页的双色球中奖号码，蓝球标记为b+号码
-def getZJnum(suffixs):
-    #suffixs = getSuffix()
+def getZJnum():
+    suffixs = getSuffix()
     num = len(suffixs)
     print 'have got suffixs count: ', num
     ssq_history_ZJnumber = []
@@ -95,9 +95,3 @@ def getZJnum(suffixs):
             continue
     return ssq_history_ZJnumber
 
-def writeData(data):
-    wf = open('ssqNum.csv','w')
-    for line in data:
-        for num in line:
-            wf.write('%s\t' % num)
-        wf.write('\n')
